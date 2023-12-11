@@ -11,7 +11,33 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Example using a list of specs with the default options
-vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
+require("config.globals")
+require("config.options")
+require("config.keymaps")
 
-require("lazy").setup('plugins')
+local opts = {
+	defaults = {
+		lazy = true,
+	},
+	install = {
+		colorscheme = { "nightfox" }
+	},
+	rtp = {
+		disabled_plugins = { 
+		    "gzip",
+	      "matchit",
+        "matchparen",
+        "netrw",
+        "netrwPlugin",
+        "tarPlugin",
+        "tohtml",
+        "tutor",
+        "zipPlugin",
+		},
+	},
+	change_detection = {
+		notify = true,
+	},
+}
+
+require("lazy").setup('plugins', opts)
