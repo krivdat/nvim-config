@@ -15,28 +15,28 @@ require("config.options")
 require("config.keymaps")
 
 local opts = {
-	defaults = {
-		lazy = true,
-	},
-	install = {
-		colorscheme = { "nightfox" }
-	},
-	rtp = {
-		disabled_plugins = {
-		    "gzip",
-	      "matchit",
-        "matchparen",
-        "netrw",
-        "netrwPlugin",
-        "tarPlugin",
-        "tohtml",
-        "tutor",
-        "zipPlugin",
-		},
-	},
-	change_detection = {
-		notify = true,
-	},
+  defaults = {
+    lazy = true,
+  },
+  install = {
+    colorscheme = { "nightfox" },
+  },
+  rtp = {
+    disabled_plugins = {
+      "gzip",
+      "matchit",
+      "matchparen",
+      "netrw",
+      "netrwPlugin",
+      "tarPlugin",
+      "tohtml",
+      "tutor",
+      "zipPlugin",
+    },
+  },
+  change_detection = {
+    notify = true,
+  },
 }
 
-require("lazy").setup('plugins', opts)
+require("lazy").setup("plugins", opts)
