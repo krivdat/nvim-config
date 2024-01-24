@@ -27,3 +27,6 @@ keymap.set("v", ">", ">gv")
 vim.api.nvim_set_keymap("n", "<C-_>", "gcc", { noremap = false })
 vim.api.nvim_set_keymap("v", "<C-_>", "gcc", { noremap = false })
 
+-- Cycle through buffers
+keymap.set("n", "<leader>.", ":bnext<CR>", opts)
+keymap.set("n", "<leader>,", ":bprevious<CR>", opts)
