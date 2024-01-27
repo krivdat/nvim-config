@@ -11,6 +11,7 @@ return {
 				"svelte",
 				"lua_ls",
 				"emmet_ls",
+        "bashls",
 			},
 			-- auto-install configured servers (with lspconfig)
 			automatic_installation = true, -- not the same as ensure_installed
