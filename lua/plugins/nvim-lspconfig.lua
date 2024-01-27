@@ -2,10 +2,10 @@ return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
-		"windwp/nvim-autopairs",
-		"williamboman/mason.nvim",
-		"hrsh7th/nvim-cmp",
-		"hrsh7th/cmp-buffer",
+		-- "windwp/nvim-autopairs",
+		-- "williamboman/mason.nvim",
+		-- "hrsh7th/nvim-cmp",
+		-- "hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },
 	},
@@ -16,7 +16,7 @@ return {
   local opts = { noremap = true, silent = true }
   local on_attach = function (client, bufnr)
     opts.buffer = bufnr
-    vim.keymap.set("n", "<space>e", vim.diagnostic.open_float, opts)
+    vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, opts)
     vim.keymap.set("n", "<leader>h", vim.lsp.buf.hover, opts) -- show the definition
     vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, opts) -- go to definition
     vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, opts) -- go to definition
