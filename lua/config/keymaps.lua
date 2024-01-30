@@ -30,3 +30,7 @@ vim.api.nvim_set_keymap("v", "<C-_>", "gcc", { noremap = false })
 -- Cycle through buffers
 keymap.set("n", "<leader>.", ":bnext<CR>", opts)
 keymap.set("n", "<leader>,", ":bprevious<CR>", opts)
+
+-- Quick close buffers
+keymap.set("n", "<leader>q", ":q<CR>", opts)
+keymap.set("n", "<leader>w", ":wq<CR>", opts) -- save and quit
