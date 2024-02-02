@@ -25,7 +25,9 @@ keymap.set("v", ">", ">gv")
 
 -- Comments
 vim.api.nvim_set_keymap("n", "<C-_>", "gcc", { noremap = false })
+vim.api.nvim_set_keymap("n", "<C-/>", "gcc", { noremap = false })
 vim.api.nvim_set_keymap("v", "<C-_>", "gcc", { noremap = false })
+vim.api.nvim_set_keymap("v", "<C-/>", "gcc", { noremap = false })
 
 -- Cycle through buffers
 keymap.set("n", "<leader>.", ":bnext<CR>", opts)

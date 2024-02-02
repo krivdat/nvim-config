@@ -3,10 +3,13 @@ return {
   lazy = false,
   config = function()
 		vim.cmd([[hi NvimTreeNormal guibg=NONE ctermbg=None]])
-		require("nvim-tree").setup({
+    local nvimTree = require("nvim-tree")
+    nvimTree.setup({
 			filters = {
 				dotfiles = false,
 			},
 		})
+    nvimTree.disable_netrw = false
+    nvimTree.hijack_netrw = true
 	end,
 }
