@@ -14,7 +14,7 @@ return {
 	local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
   local opts = { noremap = true, silent = true }
-  local on_attach = function (client, bufnr)
+  local on_attach = function (_, bufnr)
     opts.buffer = bufnr
     vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, opts)
     vim.keymap.set("n", "<leader>h", vim.lsp.buf.hover, opts) -- show the definition
@@ -61,6 +61,12 @@ return {
 				checkJs = true,
 			},
 		},
+	})
+
+	-- SQL server
+	lspconfig.sqlls.setup({
+		capabilities = capabilities,
+    on_attach = on_attach,
 	})
 
 	-- css server

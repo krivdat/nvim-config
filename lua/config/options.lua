@@ -1,5 +1,9 @@
 local opt = vim.opt
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+
 -- Tab / Indentation
 opt.tabstop = 2
 opt.shiftwidth = 2
@@ -28,4 +32,6 @@ opt.undofile = true
 opt.splitright = true
 opt.splitbelow = true
 opt.iskeyword:append("-")
-opt.clipboard:append("unnamedplus")
+opt.clipboard:append("unnamed,unnamedplus")
+opt.virtualedit = "block"
+opt.inccommand = "split"
