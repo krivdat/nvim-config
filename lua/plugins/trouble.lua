@@ -4,7 +4,7 @@ return {
 	lazy = false,
 	opts = {
 		-- auto_open = true,
-		-- auto_close = true,
+		auto_close = true,
     height = 8,
 	},
 }
