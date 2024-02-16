@@ -36,3 +36,7 @@ keymap.set("n", "<leader>,", ":bprevious<CR>", opts)
 -- Quick close buffers
 keymap.set("n", "<leader>q", ":q<CR>", opts)
 keymap.set("n", "<leader>w", ":wq<CR>", opts) -- save and quit
+
+-- Trouble
+keymap.set("n", "<leader>xx", ":TroubleToggle<CR>", opts)
+
