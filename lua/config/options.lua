@@ -22,7 +22,7 @@ opt.relativenumber = true
 opt.termguicolors = true
 opt.colorcolumn = "100"
 opt.signcolumn = "yes"
-opt.scrolloff = 10
+opt.scrolloff = 999
 opt.completeopt = "menuone,noinsert,noselect"
 
 -- Behaviour
@@ -32,6 +32,6 @@ opt.undofile = true
 opt.splitright = true
 opt.splitbelow = true
 opt.iskeyword:append("-")
-opt.clipboard:append("unnamed,unnamedplus")
+opt.clipboard:append("unnamedplus,unnamed")
 opt.virtualedit = "block"
 opt.inccommand = "split"
